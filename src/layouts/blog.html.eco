@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta -->
+    <meta charset="utf-8" />
+
+    <!-- Mobile viewport optimized: h5bp.com/viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+    <!-- Use the .htaccess and remove these lines to avoid edge case issues.
+       More info: h5bp.com/i/378 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <!-- Our site title and description -->
+    <title><%= @getPreparedTitle() %></title>
+    <meta name="description" content="<%= @getPreparedDescription() %>" />
+    <meta name="keywords" content="<%= @getPreparedKeywords() %>" />
+    <meta name="author" content="<%= @site.author or '' %>" />
+
+    <!-- Output DocPad produced meta elements -->
+    <%- @getBlock('meta').toHTML() %>
+
+    <!-- Icons -->
+    <link rel="shortcut icon" href="icons/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="icons/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="icons/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="icons/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="icons/apple-touch-icon-57-precomposed.png">
+
+    <!-- Shims: IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+        <script async src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Styles -->
+    <%- @getBlock('styles').add(@site.styles).toHTML() %>
+    
+    <!-- Typekit ajf8ggy.js -->
+    <script>
+    try { Typekit.load(); } catch (e) {}
+    </script>
+</head>
+<body>
+
+
+
+<div class="pure-g-r" id="layout">
+    <div class="sidebar pure-u">
+        <header class="header pure-u-1">
+            <hgroup>
+                <div class="G8iV4" guidedhelpid="profile_photo">
+                    <img src="//lh5.googleusercontent.com/-62JgAO9RErc/AAAAAAAAAAI/AAAAAAAABHk/2_NXzZJ-JTU/s120-c/photo.jpg" class="l-tk umj1F" style="cursor: pointer;">
+                </div>
+                <h1 class="brand-title">Colyn Brown</h1>
+                <h2 class="brand-tagline">Frontend Product Development and Consulting</h2>
+            </hgroup>
+
+            <nav class="nav">
+                <ul>
+                <li class="pure-menu-selected"><a href="/">Home</a></li>
+                <li><a href="#">Tour</a></li>
+                <% for document in @getCollection('pages').toJSON(): %>
+                    <li typeof="sioc:Page" about="<%= document.url %>" class="<%= 'active'  if @document.url is document.url %>">
+                        <a href="<%= document.url %>" property="dc:title"><%= document.title %></a>
+                    </li>
+                <% end %>
+            </ul>
+            </nav>
+        </header>
+    </div>
+
+    <div class="content pure-u-1">
+        <!-- A wrapper for all the blog posts -->
+        <div class="posts pure-g pure-u-1">
+           <%- @content %>
+        </div>
+
+
+        <footer class="footer">
+            <div class="pure-menu pure-menu-horizontal pure-menu-open">
+                <ul>
+                    <li><a href="http://purecss.io/">About</a></li>
+                    <li><a href="http://twitter.com/yuilibrary/">Twitter</a></li>
+                    <li><a href="http://github.com/yui/pure/">Github</a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,236 @@
+@import '//fonts.googleapis.com/css?family=Patua+One';
+
+/*@import '//fonts.googleapis.com/css?family=Merriweather+Sans:400,800';*/
+/*@import '//fonts.googleapis.com/css?family=Merriweather+Sans:400,800|Raleway:400,700|Open+Sans:800';
+*/
+.font-patua {
+    font-family: 'Patua One', cursive;
+}
+.font-railway {
+    font-family: 'Raleway', sans-serif;
+}
+.font-opensans {
+    font-family: 'Open Sans', sans-serif;
+}
+.title-font {
+    .font-patua();
+}
+
+pre {
+font-family: Monaco, Consolas, monospace;
+margin-top: 0em;
+margin-bottom: -1em;
+overflow: auto;
+}
+
+code {
+margin: 0;
+padding: 0;
+font-size: .8em;
+line-height: 1.5em;
+font-family: Monaco, Consolas, monospace;
+}
+
+.highlight {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+    pre {
+        padding: 15px;
+    }
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(142, 142, 214);
+    &:hover,
+    &:focus {
+        text-decoration: underline;
+    }
+}
+
+
+.G8iV4 {
+-webkit-border-radius: 50%;
+border-radius: 50%;
+width: 120px;
+height: 120px;
+overflow: hidden;
+float: right;
+}
+/* LAYOUT CSS */
+#layout {
+    padding-left: 25%; /* "left col (nav + list)" width */
+    position: relative;
+}
+
+.sidebar {
+    background: #fff4d3 url(//twimg0-a.akamaihd.net/images/themes/theme17/bg.gif);
+    background-repeat: no-repeat;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 25%;
+    margin-left: -25%;
+    color: #333;
+}
+
+.header {
+    margin: 50% 2em 0;
+    text-align: right;
+}
+
+.brand-title,
+.brand-tagline {
+    margin: 0;
+}
+.brand-title {
+    .title-font();
+    clear: both;
+}
+.brand-tagline {
+    font-weight: 300;
+    color: #000;
+}
+
+.nav-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.nav-item {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    a {
+        background: transparent;
+        border: 3px solid rgb(103, 103, 180);
+        color: #fff;
+        margin-top: 1em;
+        &:hover,
+        &:focus {
+            border: 3px solid rgb(142, 142, 214);
+            color: rgb(142, 142, 214);
+            text-decoration: none;
+        }
+    }
+}
+
+
+
+.content-subhead {
+    color: #aaa;
+    border-bottom: 1px solid #eee;
+    padding: 0.4em 0;
+    font-size: 80%;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+}
+
+.content {
+    padding: 2em 3em 0;
+}
+
+.post {
+    padding: 2em;
+    margin-bottom: 10px;
+    background-color: #eee;
+}
+.post-title {
+    font-size: 2em;
+    color: #222;
+    margin: 0;
+    margin-bottom: 0.2em;
+    .title-font();
+}
+.post-avatar {
+    border-radius: 50px;
+    float: right;
+    margin-left: 1em;
+}
+.post-description {
+    font-family: Georgia, "Cambria", serif;
+    color: #444;
+    line-height: 1.8em;
+}
+.post-meta {
+    color: #999;
+    font-size: 90%;
+    margin: 0;
+}
+
+.post-category {
+    margin: 0 0.1em;
+    padding: 0.3em 1em;
+    color: #fff;
+    background: #999;
+    font-size: 80%;
+}
+    .post-category-design {
+        background: #5aba59;
+    }
+    .post-category-pure {
+        background: #4d85d1;
+    }
+    .post-category-yui {
+        background: #8156a7;
+    }
+    .post-category-js {
+        background: #df2d4f;
+    }
+
+.post-images {
+    margin: 1em 0;
+}
+.post-image-meta {
+    margin-top: -3.5em;
+    margin-left: 1em;
+    color: #fff;
+    text-shadow: 0 1px 1px #333;
+}
+
+.footer {
+    text-align: center;
+    padding: 1em 0;
+}
+.footer a {
+    color: #ccc;
+    font-size: 80%;
+}
+.footer .pure-menu a:hover,
+.footer .pure-menu a:focus {
+    background: none;
+}
+
+@media (max-width: 767px) {
+    .sidebar {
+        width: 100%;
+        position: relative;
+        margin: 0;
+    }
+
+    .header {
+        text-align: center;
+        top: auto;
+        margin: 3em auto;
+        position: static;
+    }
+
+    #layout {
+        padding: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .content {
+        padding: 2em 1em 0;
+    }
+}
