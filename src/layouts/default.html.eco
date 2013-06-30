@@ -72,6 +72,7 @@
 
     <div class="content pure-u-1">
         <!-- A wrapper for all the blog posts -->
+        <!-- Test -->
         <div class="posts pure-g pure-u-1">
            <%- @content %>
         </div>
