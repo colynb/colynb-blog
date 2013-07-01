@@ -39,7 +39,8 @@ docpadConfig = {
 			styles: [
 				"/styles/pure-min.css"
 				"/styles/blog.css"
-				"/styles/highlight.css"
+				"/styles/highlight.css",
+				"//rawgithub.com/tilomitra/cssextras/master/css/cssextras.css"
 			]
 
 			# Scripts

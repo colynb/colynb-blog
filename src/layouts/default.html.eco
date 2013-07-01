@@ -53,10 +53,6 @@
                 <h2 class="brand-tagline"><%= @site.description %></h2>
             </hgroup></a>
 
-            <ul style="list-style: none;">
-                    <li><a href="http://twitter.com/colynb/">Twitter</a></li>
-                    <li><a href="http://github.com/colynb">Github</a></li>
-                </ul>
         </header>
     </div>
 
@@ -70,8 +66,11 @@
 
         <footer class="footer">
             <div class="pure-menu pure-menu-horizontal pure-menu-open">
+                <a class="pure-menu-heading">&copy; 2013 Colyn Brown</a>
                 <ul>
-                    <li>&copy; 2013 Colyn Brown</li>
+                    <li><a href="/about">About this site</a></li>
+                    <li><a href="http://twitter.com/colynb/">Twitter</a></li>
+                    <li><a href="http://github.com/colynb">Github</a></li>
                 </ul>
             </div>
         </footer>
