@@ -5,6 +5,6 @@ layout: 'default'
 About This Site
 ----------------
 
-I am a front end developer and this is my blog on front end development thingies. However, the difference between this blog and the many others that are out there, is that it will not be in journal form. In the future, as this site grows, each blog post will be a living document stored in github and will be open to pull requests from the community. The reason is that I want everything I write to always be as up to date and relevant as possible. Each post will have a "Date Created" and "Date Last Edited" timestamp, along with a link to the user who contributed the last change.
+I am a front end developer and this is my blog on front end development thingies. However, the difference between this blog and the many others that are out there, is that eventually it will not be in journal form. In the future, as this site grows, each blog post will be a living document stored in github and will be open to pull requests from the community. The reason is that I want everything I write to always be as up to date and relevant as possible. Each post will have a "Date Created" and "Date Last Edited" timestamp, along with a link to the user who contributed the last change.
 
 You can [follow me on Twitter](http://www.twitter.com/colynb) or [GitHub](http://github.com/colynb) if you want to receive site updates or are interested in contributing.
