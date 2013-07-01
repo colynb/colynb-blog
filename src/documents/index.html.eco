@@ -3,3 +3,11 @@ layout: 'default'
 title: 'Home'
 ---
 
+
+<% for doc in @getCollection('posts').toJSON(): %>
+<article class="post-category">
+	<a href="<%= doc.url %>"><h3 class="intro-title"><%= doc.title %></h3></a>
+	<div class="post-content"><%- doc.intro %></div>
+	<a href="<%= doc.url %>" class="pure-button pure-button-primary button-read-more">Read More...</a>
+</article>
+<% end %>

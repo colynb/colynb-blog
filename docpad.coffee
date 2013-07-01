@@ -12,46 +12,41 @@ docpadConfig = {
 		# Specify some site properties
 		site:
 			# The production url of our website
-			url: "http://fronted.io"
+			url: "http://colynb.com"
 
 			# Here are some old site urls that you would like to redirect from
 			oldUrls: [
-				'localhost',
-				'www.website.com',
-				'website.herokuapp.com'
+				'colynb.herokuapp.com'
 			]
 
 			# The default title of our website
-			title: "FrontED.io"
+			title: "Colyn Brown"
 
 			# The website description (for SEO)
 			description: """
-				When your website appears in search results in say Google, the text here will be shown underneath your website's title.
+				Development blog of Colyn Brown, front end developer and consultant
 				"""
 
 			# The website keywords (for SEO) separated by commas
 			keywords: """
-				place, your, website, keywoards, here, keep, them, related, to, the, content, of, your, website
+				front end development, javascript, docpad, nodejs, emberjs, angularjs, ux, php
 				"""
 
 			# The website author's name
 			author: "Colyn Brown"
 
 			# The website author's email
-			email: "colyn@fronted.io"
+			email: "colyn.brown@gmail.com"
 
 			# Styles
 			styles: [
 				"/styles/pure-min.css"
-				"/styles/solarized-dark-syntax.css"
 				"/styles/blog.css"
+				"/styles/highlight.css"
 			]
 
 			# Scripts
-			scripts: [
-				"http://use.typekit.net/ajf8ggy.js"
-				"/scripts/script.js"
-			]
+			scripts: []
 
 
 
@@ -102,7 +97,7 @@ docpadConfig = {
 	            model.setMetaDefaults({layout: "picture"})
 
 		frontpage: (database) ->
-    		database.findAllLive({relativeOutDirPath: $in: ['posts','pages']},[{date: -1}])
+    		database.findAllLive({relativeOutDirPath: $in: ['posts']},[{date: -1}]).on "add", (model) -> model.setMetaDefaults({layout: "post"})
 
 	# =================================
 	# DocPad Events

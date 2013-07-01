@@ -36,10 +36,7 @@
     <!-- Styles -->
     <%- @getBlock('styles').add(@site.styles).toHTML() %>
     
-    <!-- Typekit ajf8ggy.js -->
-    <script>
-    try { Typekit.load(); } catch (e) {}
-    </script>
+
 </head>
 <body>
 
@@ -48,25 +45,18 @@
 <div class="pure-g-r" id="layout">
     <div class="sidebar pure-u">
         <header class="header pure-u-1">
-            <hgroup>
-                <div class="G8iV4" guidedhelpid="profile_photo">
+            <a href="/"><hgroup>
+                <div class="site-avatar">
                     <img src="//lh5.googleusercontent.com/-62JgAO9RErc/AAAAAAAAAAI/AAAAAAAABHk/2_NXzZJ-JTU/s120-c/photo.jpg" class="l-tk umj1F" style="cursor: pointer;">
                 </div>
                 <h1 class="brand-title">Colyn Brown</h1>
-                <h2 class="brand-tagline">Frontend Product Development and Consulting</h2>
-            </hgroup>
+                <h2 class="brand-tagline"><%= @site.description %></h2>
+            </hgroup></a>
 
-            <nav class="nav">
-                <ul>
-                <li class="pure-menu-selected"><a href="/">Home</a></li>
-                <li><a href="#">Tour</a></li>
-                <% for document in @getCollection('pages').toJSON(): %>
-                    <li typeof="sioc:Page" about="<%= document.url %>" class="<%= 'active'  if @document.url is document.url %>">
-                        <a href="<%= document.url %>" property="dc:title"><%= document.title %></a>
-                    </li>
-                <% end %>
-            </ul>
-            </nav>
+            <ul style="list-style: none;">
+                    <li><a href="http://twitter.com/colynb/">Twitter</a></li>
+                    <li><a href="http://github.com/colynb">Github</a></li>
+                </ul>
         </header>
     </div>
 
@@ -81,13 +71,12 @@
         <footer class="footer">
             <div class="pure-menu pure-menu-horizontal pure-menu-open">
                 <ul>
-                    <li><a href="http://twitter.com/colynb/">Twitter</a></li>
-                    <li><a href="http://github.com/colynb">Github</a></li>
+                    <li>&copy; 2013 Colyn Brown</li>
                 </ul>
             </div>
         </footer>
     </div>
 </div>
-
+<%- @getBlock('scripts').add(@site.scripts).toHTML() %>
 </body>
 </html>
